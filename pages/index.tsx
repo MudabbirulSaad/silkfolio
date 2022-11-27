@@ -82,11 +82,11 @@ export default function index({
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const experiences: Experiences = await fetchExperiences();
-  const skills: Skill = await fetchSkills();
-  const projects: Project = await fetchProjects();
-  const socials: Socials = await fetchSocials();
+  const pageInfo: PageInfo[] = await fetchPageInfo();
+  const experiences: Experiences[] = await fetchExperiences();
+  const skills: Skill[] = await fetchSkills();
+  const projects: Project[] = await fetchProjects();
+  const socials: Socials[] = await fetchSocials();
 
   return {
     props: {
